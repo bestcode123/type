@@ -10,7 +10,8 @@ int main() {
     char oneline[150]; // Here is where all of the application data is loaded by the engine
     
     while(!feof(fp)) { // This is where most of the TYPE code is stored
-        
+        fgets(oneline, 150, fp);
+        printf("%s", oneline);
     }
 
     return 0;
