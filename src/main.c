@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "header/typetools.h"
+#include <string.h>
 /*
 TODO:
     -> Build TYPE code
@@ -12,7 +12,9 @@ int main() {
     
     while(!feof(fp)) { // This is where most of the TYPE code is stored
         fgets(oneline, 150, fp);
-        scanfile(oneline, strlen(oneline));
+        for(int i = 0; i<strlen(oneline); i++) {
+            printf("%c\n", oneline[i]);
+        }
     }
 
     return 0;
